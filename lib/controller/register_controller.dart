@@ -14,7 +14,8 @@ class RegisterController extends GetxController {
 
   bool isShowPassword = false;
 
-  void formValidation() {
+
+  Future<void> register() async {
     if (emailCtrl.text.isEmpty || passwordCtrl.text.isEmpty) {
       showSnackBar(
         message: 'Text tidak boleh kosong',
@@ -38,10 +39,6 @@ class RegisterController extends GetxController {
       showSnackBar(message: 'Password tidak sama dengan confirm password');
       return;
     }
-  }
-
-  Future<void> register() async {
-    formValidation();
     try {
       await HIVEService<UserModel>(boxName: USER_DATA).addToList(UserModel(
           fullName: nameCtrl.text,

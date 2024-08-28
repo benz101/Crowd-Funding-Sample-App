@@ -133,7 +133,9 @@ class RegisterButtonBuilder extends StatelessWidget {
           height: 45,
           color: Colors.transparent,
           child: PrimaryButton(
-            onPressed: () => controller.register(),
+            onPressed: (){
+              controller.register();
+            },
             label: 'Register',
           )),
     );

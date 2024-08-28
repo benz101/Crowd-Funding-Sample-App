@@ -11,8 +11,9 @@ class LoginController extends GetxController {
   final TextEditingController passwordCtrl = TextEditingController(text: '');
   bool isShowPassword = false;
 
-  void formValidation() {
-    if (emailCtrl.text.isEmpty || passwordCtrl.text.isEmpty) {
+
+  void loginProcess() async {
+        if (emailCtrl.text.isEmpty || passwordCtrl.text.isEmpty) {
       showSnackBar(
         message: 'Text tidak boleh kosong',
       );
@@ -30,9 +31,6 @@ class LoginController extends GetxController {
       showSnackBar(message: 'Password tidak boleh kurang dari 6 karakter');
       return;
     }
-  }
-
-  void loginProcess() async {
     try {
       final users = await HIVEService<UserModel>(boxName: USER_DATA).getList();
       final result = users.firstWhereOrNull((e) =>

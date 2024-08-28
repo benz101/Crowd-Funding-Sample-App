@@ -117,7 +117,9 @@ class LoginButtonBuilder extends StatelessWidget {
           height: 45,
           color: Colors.transparent,
           child: PrimaryButton(
-            onPressed: () => controller.loginProcess(),
+            onPressed: () {
+              controller.loginProcess();
+            },
             label: 'Login',
           )),
     );
