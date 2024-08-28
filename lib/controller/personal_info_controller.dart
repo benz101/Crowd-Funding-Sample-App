@@ -484,7 +484,7 @@ class PersonalInfoController extends GetxController {
       // ];
     }
     postalCodeCtrl.text = currentUserModel?.postalCode ?? '';
-
+    equalWithIdCardAddress = currentUserModel?.domicileAddressEqualWithIdCardAddress??false;
     //step 3
     companyNameCtrl.text = currentUserModel?.companyName ?? '';
     companyAddressCtrl.text = currentUserModel?.addressOfIdCard ?? '';
