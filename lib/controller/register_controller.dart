@@ -41,6 +41,7 @@ class RegisterController extends GetxController {
   }
 
   Future<void> register() async {
+    formValidation();
     try {
       await HIVEService<UserModel>(boxName: USER_DATA).addToList(UserModel(
           fullName: nameCtrl.text,

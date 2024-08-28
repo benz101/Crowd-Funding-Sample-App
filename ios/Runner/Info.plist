@@ -45,5 +45,13 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app requires access to the photo library to read and write files.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This app requires permission to save photos to the library.</string>
+	<key>NSDocumentsFolderUsageDescription</key>
+	<string>This app needs access to documents for reading and writing files.</string>
+	<key>NSFileProviderDomainUsageDescription</key>
+	<string>This app requires access to files for reading and writing.</string>
 </dict>
 </plist>
